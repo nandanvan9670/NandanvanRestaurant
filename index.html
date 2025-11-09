@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍴 Nandanvan Restaurant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+ <!-- ✅ Navbar -->
+  <nav>
+    <div class="logo">🍴 Nandanvan Restaurant</div>
+    
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+
+      
+      <!-- Toggle Button -->
+      <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle-btn">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section" id="home">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Nandanvan Restaurant</h1>
+    <p>Delicious Food, Delivered Fresh!</p>
+    <!-- Search Box -->
+  <section id="search-section">
+  <div class="search-wrapper">
+    <input type="text" id="searchBox" placeholder="Search menu..." onkeyup="searchMenu()">
+    <span id="clearSearch">✖</span>
+  </div>
+</section>
+    <div class="menu-header">
+    <h2>Our Menu</h2>
+      <button id="toggleMenuBtn">Show Menu</button>
+      </div>
+ 
+  </div>
+</section>
+
+
+  <!-- Menu Section -->
+ 
+  <section id="menu">
+    
+    <div id="menuSection" class="menu-container" >
+
+      <div class="menu-item">
+        <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg" alt="Pizza">
+        <h3>Pizza</h3>
+        <p>Cheesy delight with toppings</p>
+        <span>₹200</span>
+        <button onclick="addToCart('Pizza', 200)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.jpg" alt="Burger">
+        <h3>Burger</h3>
+        <p>Juicy grilled burger</p>
+        <span>₹120</span>
+        <button onclick="addToCart('Burger', 120)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/1190466456/photo/chicken-riggies.jpg?s=612x612&w=0&k=20&c=j7g0xbLUJ-bcfjV62Iz9pLuihFu1KKpZoyLhTpK3KZc=" alt="Pasta">
+        <h3>Pasta</h3>
+        <p>Italian pasta with sauce</p>
+        <span>₹150</span>
+        <button onclick="addToCart('Pasta', 150)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/sandwich-494706_1280.jpg" alt="Sandwich">
+        <h3>Sandwich</h3>
+        <p>Fresh veggies with cheese</p>
+        <span>₹90</span>
+        <button onclick="addToCart('Sandwich', 90)">Add</button>
+      </div>
+
+      <div class="menu-item">
+<img src="https://www.shutterstock.com/image-photo/crispy-french-fry-tomato-ketchup-260nw-2462123559.jpg" alt="Fries">
+        <h3>French Fries</h3>
+        <p>Crispy potato fries</p>
+        <span>₹70</span>
+        <button onclick="addToCart('French Fries', 70)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/1457320271/photo/close-up-of-barista-pouring-hot-water-on-ground-coffee-with-paper-filter-to-making-a-drip.jpg?s=612x612&w=0&k=20&c=5tuCaP4aKzBNOEC601whsitWyQGmOEngykcH9VX6_Lo=" alt="Coffee">
+        <h3>Coffee</h3>
+        <p>Hot & Fresh Brewed Coffee</p>
+        <span>₹60</span>
+        <button onclick="addToCart('Coffee', 60)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/589053360/photo/glasses-of-chai-with-newspaper-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=AxHNUjD6w_mZK8OtlR98mnusgw-GraVhmKdeMWRPTDc=" alt="Tea">
+        <h3>Tea</h3>
+        <p>Refreshing Indian Chai</p>
+        <span>₹40</span>
+        <button onclick="addToCart('Tea', 40)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/183340818/photo/closeup-picture-of-profiteroles-bathing-in-chocolate.jpg?s=612x612&w=0&k=20&c=AHmQNB7_ykYI1HES6qXxnjI1VVjDU6yF8cl1KFM0BrM=" alt="Ice Cream">
+        <h3>Ice Cream</h3>
+        <p>Sweet frozen treat</p>
+        <span>₹80</span>
+        <button onclick="addToCart('Ice Cream', 80)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/950210182/photo/round-chocolate-cake.jpg?s=612x612&w=0&k=20&c=kUEBRJIYS2y3-mJmhR78_z1htRJUevfNniZLQ0Mf640=" alt="Cake">
+        <h3>Chocolate Cake</h3>
+        <p>Rich & Creamy Chocolate</p>
+        <span>₹150</span>
+        <button onclick="addToCart('Cake', 150)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/1156644405/photo/chinese-gravy-noodles.jpg?s=612x612&w=0&k=20&c=jIctmtt20nPGBTBmoY2ubNl36JYzWIgOA3tjdU0pbmU=" alt="Noodles">
+        <h3>Noodles</h3>
+        <p>Chinese style noodles</p>
+        <span>₹130</span>
+        <button onclick="addToCart('Noodles', 130)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/173501950/photo/fruit-smoothies.jpg?s=612x612&w=0&k=20&c=gV46AXr2qDO66Zfi5FN0jY8Qn41k6PkS-M85zEVej8E=" alt="Juice">
+        <h3>Fruit Juice</h3>
+        <p>Fresh seasonal juice</p>
+        <span>₹100</span>
+        <button onclick="addToCart('Juice', 100)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/919666108/photo/two-fresh-salad-bowls.jpg?s=612x612&w=0&k=20&c=um1r6jBH5LAuWCswQipXtFxb--099SF0OJMtss-L_-c=" alt="Salad">
+        <h3>Salad</h3>
+        <p>Healthy fresh veggies</p>
+        <span>₹110</span>
+        <button onclick="addToCart('Salad', 110)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/1472989061/photo/maoxuewang.jpg?s=612x612&w=0&k=20&c=5dL4PbYFQGsv-KQ_otolsqkIuc_tKjpOscY_z5ZSUu4=" alt="Soup">
+        <h3>Soup</h3>
+        <p>Hot & Spicy Soup</p>
+        <span>₹90</span>
+        <button onclick="addToCart('Soup', 90)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/1020597180/photo/chocolate-milkshake-closeup-view.jpg?s=612x612&w=0&k=20&c=wlM3VfUtFnXs9f9_31Alqapq23L5J7m5bDb7fvE7baM=" alt="Shake">
+        <h3>Milkshake</h3>
+        <p>Chilled sweet drink</p>
+        <span>₹120</span>
+        <button onclick="addToCart('Milkshake', 120)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/2212565196/photo/a-large-plate-of-biryani-rice-with-grilled-chickens.jpg?s=612x612&w=0&k=20&c=Wj6-TNoXk3YSkpRZW24ZjISAxege_LTWdl-fIPEOXyM=" alt="Biryani">
+        <h3> Chikan Biryani</h3>
+        <p>Spicy rice with flavors</p>
+        <span>₹250</span>
+        <button onclick="addToCart('Biryani', 250)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/1146027542/photo/asian-mixed-rice-dish.jpg?s=612x612&w=0&k=20&c=5HrienLK6msvsC1aOxfmO09GOqZ6tZomPHD-H3gYyio=" alt="Veggie Biryani">
+        <h3>Veggie Biryani</h3>
+        <p>A popular dish in India.</p>
+        <span>₹199</span>
+        <button onclick="addToCart('Veggie Biryani', 199)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/2226243291/photo/an-indian-veg-thali-with-different-curries-restaurant.jpg?s=612x612&w=0&k=20&c=xXzeeDiM8zbZKaeeLbZaUm1U8BEkp_C76FceULqpRcg=" alt="Veg Thali">
+        <h3>Veg Thali</h3>
+        <p>There are chapatis, Paneer, grams, daal, roti, salads.</p>
+        <span>₹399</span>
+        <button onclick="addToCart('Veg Thali', 399)">Add</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/933220108/photo/south-indian-thali-dish.jpg?s=612x612&w=0&k=20&c=IDhaYfVF6DmLQzUeDm0aZiUzUhPNpfVwgsfcd4HY7Vc=" alt="Sauth Indian Thali">
+        <h3>South Ind spe Thali </h3>
+        <p>South Indian Thali dish  papad, sambar curry, chicken, ​and rice.</p>
+        <span>₹450</span>
+        <button onclick="addToCart('South Indian Thali', 450)">Add</button>
+      </div>
+
+      
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/1219514428/photo/south-india-thali.jpg?s=612x612&w=0&k=20&c=I_yyK1kUtvsn9RHfpuomaOl5dB9xBThQlhg18qwLQ2g=" alt="Sauth Indian Thali">
+        <h3>South Indian Thali </h3>
+        <p>A special south India veg thali served on banana leaf</p>
+        <span>₹350</span>
+        <button onclick="addToCart('South Indian Thali', 350)">Add</button>
+      </div>
+
+      
+      <div class="menu-item">
+        <img src="https://media.gettyimages.com/id/2138806640/video/european-bass-grilled-fish-with-veggies.avif?s=640x640&k=20&c=vjNg6jCvIFRR0OHrb_UziDAA-yvHxTBNaidlOTgDpyM=" alt="fishes">
+        <h3>Fishes</h3>
+        <p>European bass grilled fish with veggies</p>
+        <span>₹299</span>
+        <button onclick="addToCart('Fishes', 299)">Add</button>
+      </div>
+    </div>
+  </section>
+  </div>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="about">
+    <h2>Your Cart</h2>
+    <ul id="cart-list"></ul>
+    <h3 id="totalAmount">Total: ₹0</h3>
+    <button  onclick="placeOrder()">Place Order</button>
+  </section>
+
+
+<!-- Order Form Modal -->
+<div id="orderFormModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Place Your Order</h2>
+    <form id="orderForm">
+      <label>Name:</label>
+      <input type="text" id="ordername" required><br><br>
+
+      <label>Phone:</label>
+      <input type="tel" id="orderphone" required><br><br>
+
+      <label>Address:</label>
+      <textarea id="orderaddress" required></textarea><br><br>
+
+     <!-- Payment Method Section -->
+<label for="payment">Payment Method:</label>
+<select id="payment" name="payment">
+  <option value="">--Select Payment Method--</option>
+  <option value="upi">UPI</option>
+  <option value="card">Credit/Debit Card</option>
+  <option value="cod">Cash on Delivery</option>
+</select>
+
+<!-- Optional UPI / Card fields (hidden by default) -->
+<div id="upiField">
+  <input type="text" id="upi" name="upi" placeholder="example@upi">
+</div>
+
+<div id="cardField">
+  <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number">
+  <div class="row">
+    <input type="text" id="expiry" name="expiry" placeholder="Expiry MM/YY">
+    <input type="text" id="cvv" name="cvv" placeholder="CVV">
+  </div>
+</div>
+  <button type="submit" class="submitBtn">Submit Order</button><br><br>
+  </form>
+  </div>
+  </div>
+
+<!-- ✅ Order Success Popup -->
+<div id="successPopup" class="popup">
+  <div class="popup-content">
+    <h2>✅ Order Placed Successfully!</h2>
+    <p>Thank you for ordering from <strong>Nandanvan Restaurant</strong> 🍴</p>
+    <button id="closePopup">OK</button>
+   </div>
+</div>
+
+
+<!-- Opening & Closing Time -->
+<section id="about">
+  <h2>⏰ Opening Hours</h2>
+  <p>Monday - Friday: 9:00 AM - 10:00 PM</p>
+  <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+</section>
+
+<!-- Contact Info -->
+<section id="contact">
+  <h2>📞 Contact Us</h2>
+  <p>Phone: +91 7414976968</p>
+  <p>Email: nandanvan.resto@gmail.com</p>
+  <p>Address: Nandanvan Restaurant , Hadapsar Solapur Road, Pune Maharashtra, India</p>
+  <p>Website: <a href="https://www.justdial.com/Ahmednagar/Hotel-Nandanvan-Family-Restaurant
+  -Near-Sukkar-Chowk-Maliwada-Tilak-Road/9999PX241-X241-190823064604-N8A8_BZDET" target="_blank">www.nandanvanresto.com</a></p>
+</section>
+
+<!-- Feedback Form -->
+<section id="feedback">
+  <h2>✉️ Send Feedback</h2>
+  <form id="feedbackForm">
+    <input type="text" name="name" id="name" placeholder="Your Name" required>
+    <input type="email" name="email" id="email" placeholder="Your Email" required>
+    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+  <p id="status"></p>
+</section>
+
+
+<footer>
+  <div class="footer-container">
+    <p>© 2025 Nandanvan Restaurant. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/nandanvan.gaikwad.1" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nandan_1_" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>Designed by <strong>Nandanvan Gaikwad</strong></p>
+  </div>
+</footer>
+<script src="index.js"></script>
+</body>
+</html>
