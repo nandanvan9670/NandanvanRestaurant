@@ -1,2 +1,17 @@
-# NandanvanRestaurant
-Responsive restaurant web app with menu, cart, and order,  feedback, contact, etc  simulation built using HTML, CSS &amp; JavaScript. 
+# Restaurant Management System
+
+## Description
+This is a restaurant management system for handling orders and billing.
+
+## Features
+- Add food items
+- Manage orders
+- Generate bill
+
+## Tech Stack
+- HTML
+- CSS
+- JavaScript
+
+## How to Run
+Open index.html in browser
